@@ -6,7 +6,7 @@ config interface 'loopback'
 	option netmask '255.0.0.0'
 
 config globals 'globals'
-	option ula_prefix 'fdbb:a0d1:5d1f::/48'
+	option ula_prefix 'fddb:e6bd:8947::/48'
 
 config device
 	option name 'br-lan'
@@ -23,6 +23,7 @@ config interface 'lan'
 config interface 'wan'
 	option device 'eth0.2'
 	option proto 'dhcp'
+	option metric '100'
 
 config interface 'wan6'
 	option device 'eth0.2'
@@ -45,7 +46,7 @@ config switch_vlan
 
 config interface 'trw_wwan'
 	option proto 'dhcp'
-	option metric '100'
+	option metric '101'
 
 config interface 'trw_wwan6'
 	option device '@trw_wwan'
